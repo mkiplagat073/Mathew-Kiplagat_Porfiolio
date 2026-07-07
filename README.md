@@ -55,14 +55,11 @@ Then visit `http://localhost:8000` in your browser.
 
 ## Contact
 
-- **Email:** your.email@example.com
-- **Phone:** +254 700 000 000
-- **LinkedIn:** [linkedin.com/in/yourname](https://linkedin.com/in/yourname)
-- **Location:** Embu, Kenya
+- **Email:** mkiplagat074@gmail.com
+- **Phone:** +254 746895417
+- **LinkedIn:** [linkedin.com/in/yourname](https://www.linkedin.com/in/mathewkiplagat/)
+- **Location:** Nairobi, Kenya
 
 ---
 
-## License
 
-Feel free to use this as a template for your own portfolio — just swap in
-your own content and details.
