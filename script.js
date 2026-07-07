@@ -1,85 +1,110 @@
-// ============================================================
-// Mobile nav toggle
-// ============================================================
-const menuBtn = document.getElementById('menuBtn');
-const nav = document.querySelector('.topbar__nav');
+// Data
+const skills = [
+    "HTML", "CSS", "JavaScript", "React", "Tailwind", "Node.js",
+    "Python", "Git", "Figma", "TypeScript", "Next.js", "MongoDB"
+];
 
-menuBtn.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('is-open');
-  menuBtn.setAttribute('aria-expanded', isOpen);
-});
-
-// close mobile nav after clicking a link
-nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('is-open');
-    menuBtn.setAttribute('aria-expanded', 'false');
-  });
-});
-
-// ============================================================
-// Scroll-spy: highlight active nav link
-// ============================================================
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.topbar__nav a');
-
-const spyObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      navLinks.forEach(link => {
-        link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
-      });
+const projects = [
+    {
+        title: "Project One",
+        desc: "Short description of your first project. What problem it solves and technologies used.",
+        link: "#",
+        tech: "React • Tailwind"
+    },
+    {
+        title: "Project Two",
+        desc: "Short description of your second project.",
+        link: "#",
+        tech: "Next.js • Node.js"
+    },
+    {
+        title: "Project Three",
+        desc: "Short description of your third project.",
+        link: "#",
+        tech: "Python • Django"
     }
-  });
-}, { rootMargin: '-40% 0px -50% 0px' });
+];
 
-sections.forEach(section => spyObserver.observe(section));
-
-// ============================================================
-// Animate skill gauges when they scroll into view
-// ============================================================
-const gauges = document.querySelectorAll('.gauge');
-
-const gaugeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const gauge = entry.target;
-      const value = gauge.getAttribute('data-value');
-      const fill = gauge.querySelector('.gauge__fill');
-      fill.style.width = `${value}%`;
-      gaugeObserver.unobserve(gauge);
-    }
-  });
-}, { threshold: 0.4 });
-
-gauges.forEach(gauge => gaugeObserver.observe(gauge));
-
-// ============================================================
-// Title block: live date
-// ============================================================
-const tbDate = document.getElementById('tbDate');
-if (tbDate) {
-  const now = new Date();
-  const options = { year: 'numeric', month: 'short' };
-  tbDate.textContent = now.toLocaleDateString('en-US', options).toUpperCase();
+// Render Functions
+function renderSkills() {
+    const container = document.getElementById('skills-grid');
+    container.innerHTML = skills.map(skill => `
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl text-center font-medium shadow-sm">
+            ${skill}
+        </div>
+    `).join('');
 }
 
-// ============================================================
-// Footer year
-// ============================================================
-document.getElementById('year').textContent = new Date().getFullYear();
+function renderProjects() {
+    const container = document.getElementById('projects-grid');
+    container.innerHTML = projects.map(project => `
+        <div class="project-card bg-white dark:bg-gray-700 rounded-3xl overflow-hidden shadow-sm">
+            <div class="h-52 bg-gray-200 dark:bg-gray-600 flex items-center justify-center">
+                <span class="text-6xl text-gray-400">📸</span>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">${project.title}</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">${project.desc}</p>
+                <p class="text-sm text-blue-600 dark:text-blue-400 mb-4">${project.tech}</p>
+                <a href="${project.link}" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium hover:text-blue-600">
+                    View Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    `).join('');
+}
 
-// ============================================================
-// Contact form (front-end only placeholder)
-// To actually receive messages, hook this up to a service like
-// Formspree, Netlify Forms, or your own backend. See README.
-// ============================================================
-const form = document.getElementById('contactForm');
-const formNote = document.getElementById('formNote');
+// Navigation (Smooth Scroll + Active Link)
+function initNavigation() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  formNote.textContent = 'STATUS: Message captured locally — connect a form service to send it (see README).';
-  form.reset();
+    // Click → Smooth Scroll
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const navHeight = 80;
+                const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY - navHeight;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Scroll → Update Active Link
+    function updateActiveLink() {
+        let current = '';
+        const scrollY = window.scrollY + 150;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveLink);
+    updateActiveLink(); // Initial call
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    renderSkills();
+    renderProjects();
+    initNavigation();
 });

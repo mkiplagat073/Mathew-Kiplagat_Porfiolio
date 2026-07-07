@@ -1,485 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — Chemical Engineer &amp; Sales Engineer</title>
-<meta name="description" content="Portfolio of Your Name — Chemical Process Engineer and Sales Engineer.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
 
-<!-- ============ PROCESS LINE (signature element) ============ -->
-<div class="process-line" aria-hidden="true">
-  <svg class="process-line__svg" preserveAspectRatio="none" viewBox="0 0 2 1000">
-    <line class="process-line__pipe" x1="1" y1="0" x2="1" y2="1000" />
-  </svg>
-</div>
-
-<!-- ============ NAV ============ -->
-<header class="topbar">
-  <div class="topbar__brand">
-    <span class="topbar__brand-mark">YN</span>
-    <span class="topbar__brand-text">Your Name</span>
-  </div>
-  <nav class="topbar__nav" aria-label="Primary">
-    <a href="#about" data-tag="PFD-01"><span class="nav-tag">PFD-01</span>About</a>
-    <a href="#skills" data-tag="INST-02"><span class="nav-tag">INST-02</span>Skills</a>
-    <a href="#certificates" data-tag="CERT-03"><span class="nav-tag">CERT-03</span>Certificates</a>
-    <a href="#projects" data-tag="EQ-04"><span class="nav-tag">EQ-04</span>Projects</a>
-    <a href="#contact" data-tag="REV-05"><span class="nav-tag">REV-05</span>Contact</a>
-  </nav>
-  <button class="topbar__menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</header>
-
-<!-- ============ HERO / HOME ============ -->
-<section class="hero" id="home">
-  <div class="hero__inner">
-    <p class="hero__eyebrow">CHE + SALES // PROCESS-TO-PROFIT</p>
-    <h1 class="hero__title">
-      I turn <span class="hl">reaction kinetics</span><br>
-      into <span class="hl hl--amber">closed deals.</span>
-    </h1>
-    <p class="hero__sub">
-      Graduate Chemical Engineer and Sales Engineer. I speak both fluent
-      process flow diagram and fluent purchase order — built to spec projects
-      that satisfy engineers and close with procurement.
-    </p>
-    <div class="hero__cta">
-      <a href="#projects" class="btn btn--primary">View Projects</a>
-      <a href="#contact" class="btn btn--ghost">Get In Touch</a>
-    </div>
-  </div>
-
-  <!-- Title block: engineering drawing stamp -->
-  <div class="title-block">
-    <div class="title-block__row title-block__row--title">
-      <span>TITLE</span>
-      <strong>YOUR NAME — PORTFOLIO</strong>
-    </div>
-    <div class="title-block__grid">
-      <div><span>DRAWN BY</span><strong>Y. NAME</strong></div>
-      <div><span>DATE</span><strong id="tbDate">—</strong></div>
-      <div><span>REV</span><strong>1.0</strong></div>
-      <div><span>SCALE</span><strong>N.T.S.</strong></div>
-      <div><span>SHEET</span><strong>1 OF 1</strong></div>
-      <div><span>STATUS</span><strong class="status-live">OPEN TO WORK</strong></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section class="section" id="about">
-  <div class="section__head">
-    <span class="node-tag">PFD-01</span>
-    <h2>About</h2>
-  </div>
-  <div class="about__grid">
-    <div class="about__diagram" aria-hidden="true">
-      <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="120" cy="60" r="26" class="mol-node" />
-        <circle cx="60" cy="140" r="20" class="mol-node mol-node--amber" />
-        <circle cx="180" cy="140" r="20" class="mol-node" />
-        <circle cx="120" cy="200" r="16" class="mol-node mol-node--amber" />
-        <line x1="120" y1="86" x2="66" y2="124" class="mol-bond" />
-        <line x1="120" y1="86" x2="174" y2="124" class="mol-bond" />
-        <line x1="66" y1="156" x2="112" y2="192" class="mol-bond" />
-        <line x1="174" y1="156" x2="128" y2="192" class="mol-bond" />
-      </svg>
-    </div>
-    <div class="about__copy">
-      <p>
-        I'm a graduate industrial chemical engineer working as a sales
-        engineer — which means I've spent time on both sides of the
-        purchase order: designing and troubleshooting process equipment,
-        and helping clients specify, justify, and buy it.
-      </p>
-      <p>
-        I understand mass and energy balances well enough to catch a
-        mis-sized pump on a datasheet, and I understand a buyer's
-        priorities well enough to know that spec sheet won't close the
-        deal on its own. That combination is what I bring to every
-        project: technically credible, commercially useful.
-      </p>
-      <p>
-        Outside of client meetings, I like getting back into the weeds —
-        process simulations, P&amp;ID reviews, and finding the cheaper
-        equivalent spec that still meets the process requirement.
-      </p>
-      <a href="assets/docs/cv.pdf" class="btn btn--ghost about__bio-btn" download>
-        Download CV ↓
-      </a>
-    </div>
-  </div>
-
-  <!-- ===== Autobiography (expandable text) ===== -->
-  <div class="bio">
-    <h3 class="bio__title">My Story</h3>
-      <div class="bio__text" id="bioText">
-        <p>My name is Kipkorir Kevin Isack, born in the year 2004 in the serene Kilibwoni Village of Nandi County, Kenya. This autobiography is not merely a recount of my achievements or a chronology of events but a journey through the experiences that have shaped me into who I am today. From the modest beginnings in a rural Kenyan village to the academic halls of Dedan Kimathi University of Technology, my life has been a testament to the power of education, resilience, and the unwavering support of a loving family. It is a narrative of overcoming challenges, embracing opportunities, and the relentless pursuit of knowledge.</p>
-        <p>Growing up in Kilibwoni provided me with a unique perspective on life. The rolling hills and vibrant community instilled in me a deep appreciation for nature and a sense of belonging within my cultural heritage. Family gatherings, filled with laughter and storytelling, fostered bonds that would endure through the years, shaping my values of togetherness, respect, and resilience.</p>
-        <div class="bio__more" id="bioMore">
-          <p>From a young age, my curiosity knew no bounds. Inspired by my parents' emphasis on education and self-improvement, I eagerly delved into a world of learning and exploration. My early dreams reflected this spirit of curiosity and ambition.</p>
-          <p>Initially drawn to the realm of law, I was captivated by the principles of justice and fairness. I envisioned a future where I could advocate for the rights of others and contribute to the betterment of society. This aspiration, rooted in a desire to make a positive impact, set the stage for my journey of self-discovery.</p>
-          <p>As I matured, my interests expanded to encompass the field of healthcare. Witnessing the challenges faced by communities in accessing quality medical care ignited a passion within me to become a healer. The dream of becoming a doctor, of alleviating pain and restoring hope, became a driving force in my academic pursuits.</p>
-          <p>Yet, the allure of engineering beckoned with promises of innovation and problem-solving. I found myself drawn to the idea of designing solutions to complex challenges, of pushing the boundaries of what was possible. This fascination with technology and creativity fueled my imagination and opened new pathways of exploration.</p>
-          <p>Amidst these evolving aspirations, I remained anchored by the values instilled in me by my upbringing. The importance of hard work, integrity, and empathy guided my actions and decisions, shaping my character and outlook on life. I embraced challenges as opportunities for growth, learning valuable lessons along the way.</p>
-          <p>It was during my educational journey that I discovered Industrial Chemistry — a discipline that combined my love for science, creativity, and real-world application. The blend of theoretical knowledge and practical skills resonated deeply with my interests and aspirations, leading me to pursue a degree in this field.</p>
-          <p>Today, I stand at the threshold of a promising future. My journey from childhood dreams to current pursuits reflects a trajectory shaped by resilience, curiosity, and a deep-rooted passion for making a meaningful difference in the world.</p>
-
-          <h4 class="bio__section-title">Early Life</h4>
-          <p>During my early years, I was known as a quiet child, often lost in thought, observing the world with a keen sense of wonder. It was during these formative years that my love for science began to take root, shaping my interests and igniting a passion for exploration.</p>
-          <p>One of the most profound influences in my life during this time was my father. A pillar of strength and wisdom, he not only provided for our family but also served as a role model for hard work, integrity, and perseverance. I looked up to him with admiration, aspiring to embody the values he exemplified.</p>
-          <p>My relationship with my brothers was another cornerstone of my early life. Despite the occasional sibling squabbles, we shared a strong bond built on mutual respect and affection. Together, we embarked on countless adventures, from exploring the outdoors to engaging in imaginative play. These shared experiences fostered a sense of camaraderie and taught me the importance of teamwork and companionship.</p>
-          <p>However, amidst the joys of family life, I also grappled with social anxiety. The fear of judgment and unfamiliar social situations often left me feeling anxious and withdrawn. It was a challenge that I worked to overcome, learning to navigate social interactions with patience, self-compassion, and a growing sense of confidence.</p>
-          <p>In the realm of hobbies, video games became both a source of entertainment and a creative outlet for me. They allowed me to escape into fantastical worlds, where imagination knew no bounds. Through gaming, I discovered the power of storytelling, problem-solving, and critical thinking, skills that would later prove invaluable in various aspects of my life.</p>
-          <p>Academically, I thrived in the structured environment of school. I was a diligent student, eager to absorb knowledge and excel in my studies. Science, in particular, captured my fascination. The intricacies of biology, chemistry, and physics captivated my imagination, fueling a desire to understand the underlying principles of the natural world.</p>
-          <p>As I transitioned through adolescence, the lessons learned during my early years continued to shape my outlook on life and contribute to my personal growth. One aspect that stood out was the importance of focus and determination — despite my introverted nature and occasional social anxiety, I remained steadfast in pursuing my academic goals, immersing myself in books, experiments, and intellectual pursuits.</p>
-          <p>As I approached the end of my teenage years, I began to contemplate my future path. The diverse experiences of my early life — academic achievements, hobbies, social interactions, and family bonds — provided me with a well-rounded foundation from which to explore different avenues, armed with lessons learned and a vision for what I hoped to achieve.</p>
-
-          <h4 class="bio__section-title">Education</h4>
-          <p>At Ngeria West Academy, where I started and completed Grade 8, my academic journey began to take shape. The school's emphasis on holistic education provided a well-rounded learning experience that went beyond textbooks and classrooms. It was here that I first delved into the wonders of science, particularly chemistry, which captured my imagination with its mysteries and possibilities.</p>
-          <p>Academically, I thrived in the structured yet nurturing environment of Ngeria West. I consistently achieved high grades and was recognized for my academic achievements, ranking fifth in national exams. Beyond academics, I actively participated in sports, particularly football, which taught me valuable lessons in teamwork, discipline, and resilience.</p>
-          <p>During my high school years at Kabarnet High School, I embarked on a transformative journey marked by academic challenges, personal growth, and a plethora of memorable experiences. The curriculum was more comprehensive and demanding, requiring a higher level of critical thinking, research, and independent study. I eagerly embraced these challenges, particularly in the sciences and mathematics.</p>
-          <p>Beyond the confines of traditional academics, high school offered a vibrant array of extracurricular activities — science fairs, academic competitions, and clubs focused on topics ranging from robotics to environmental conservation. I actively sought out leadership opportunities within the school community, serving as a dorm prefect — a significant responsibility that taught me invaluable lessons in effective communication, conflict resolution, and servant leadership.</p>
-          <p>I went on to pursue a Bachelor of Industrial Chemistry at Dedan Kimathi University of Technology (DeKUT), where the academic odyssey unfolded through a meticulously crafted curriculum traversing general chemistry, organic synthesis, analytical techniques, and industrial processes. Theoretical lectures, supplemented by interactive discussions, laid the groundwork for conceptual understanding, while laboratory sessions provided a canvas for practical experimentation, data analysis, and scientific inquiry.</p>
-          <p>Central to the university experience were research endeavors — from investigating novel catalysts for sustainable reactions to elucidating the mechanisms of chemical transformations. These research experiences honed technical skills but also fostered resilience, adaptability, and a commitment to rigorous scientific inquiry.</p>
-          <p>Beyond the laboratory, the university provided a vibrant ecosystem for intellectual discourse — seminars, symposiums, industry-academia interactions, guest lectures, industrial visits, and workshops that offered insights into real-world applications and career pathways in the chemical industry. Leadership roles in student organizations and internships offered firsthand exposure to industrial operations, quality control protocols, and regulatory compliance standards.</p>
-          <p>Reflecting on my educational journey from early childhood to university, I am profoundly grateful for the diverse experiences, academic challenges, and personal growth that have shaped my path — from the curiosity-driven days of childhood to the specialized studies of university.</p>
-
-          <h4 class="bio__section-title">Career and Work Experience</h4>
-          <p>After completing high school, I embarked on a period of valuable experiential learning that significantly contributed to my understanding of practical applications in chemistry. While awaiting admission to university, I took on a tutoring role at a local high school — an experience that refined my communication skills, reinforced my understanding of academic concepts, and fostered a passion for teaching and knowledge-sharing.</p>
-          <p>Simultaneously, I undertook an attachment at the Ministry of Water laboratories — a pivotal experience that allowed me to gain hands-on experience conducting water quality tests and analyses. Working under the guidance of experienced professionals, I learned to perform pH testing, turbidity measurements, chemical analyses for contaminants, and microbial assessments.</p>
-          <p>The attachment provided a comprehensive overview of the critical role of chemistry in ensuring water safety and quality. I gained practical insights into the methodologies, protocols, and standards employed in water testing, developing proficiency in using laboratory equipment, interpreting test results, and adhering to stringent quality control measures.</p>
-          <p>One of the highlights was contributing to real-world projects focused on water quality assessment — from assessing drinking water quality in rural communities to evaluating wastewater treatment processes in urban areas. These projects deepened my technical skills and enhanced my understanding of the broader implications of chemistry in addressing societal challenges related to water resources management.</p>
-          <p>Through this hands-on experience, I honed critical skills such as attention to detail, data analysis, problem-solving, and collaboration within multidisciplinary teams. I collaborated with environmental scientists, engineers, and policymakers on initiatives aimed at improving water treatment processes and developing sustainable water management strategies.</p>
-          <p>This attachment instilled in me a strong sense of environmental responsibility and ethical conduct — the importance of adhering to ethical guidelines, maintaining data integrity, and prioritizing transparency in scientific reporting. It also enhanced my leadership skills, adaptability, and resilience in dynamic work environments, reinforcing my commitment to pursuing a career where I can apply my knowledge and skills to make meaningful contributions to society, particularly in environmental sustainability, public health, and scientific innovation.</p>
-
-          <h4 class="bio__section-title">Personal Challenges</h4>
-          <p>Throughout my life journey, I have encountered various challenges that have tested my resilience, determination, and adaptability — challenges that, while daunting at times, have also been opportunities for growth, self-discovery, and personal triumphs.</p>
-          <p>One significant challenge during my formative years was coping with social anxiety — the fear of judgment, unfamiliar social situations, and communication apprehension. Through exposure, cognitive-behavioral techniques, and support from loved ones, I learned to navigate social settings with greater confidence, assertiveness, and authenticity — a transformative triumph that empowered me to forge meaningful connections and embrace new experiences without hesitation.</p>
-          <p>Balancing academic pursuits with personal responsibilities and extracurricular activities was another challenge. I developed strategies such as creating schedules, setting realistic goals, and seeking support when needed, enhancing my organizational skills, resilience, and ability to thrive in high-pressure environments.</p>
-          <p>Transitioning from one phase of life to another — moving to a new city, starting university, embarking on a career path — required courage, flexibility, and a growth mindset. Each transition reinforced my adaptability, resilience, and capacity to thrive in diverse environments.</p>
-          <p>One of the most transformative challenges I faced was overcoming self-doubt and imposter syndrome. Despite academic achievements and positive feedback, I struggled with feelings of inadequacy. Engaging in self-compassion practices, reframing negative self-talk, and embracing a growth mindset were instrumental in building self-confidence, resilience, and a sense of self-worth.</p>
-          <p>Despite these challenges, I am proud of my academic achievements and milestones — moments of triumph that validated my hard work, dedication, and intellectual capabilities, motivating me to pursue further academic and career goals with determination and passion.</p>
-
-          <h4 class="bio__section-title">Core Values and Beliefs</h4>
-          <p>Core values and beliefs form the foundation of my identity and guide my decisions, actions, and interactions with the world. At the core of my belief system is a deep trust in God and a positive mental attitude that shapes my outlook on life and empowers me to navigate challenges with resilience and optimism.</p>
-          <p>Integrity is another fundamental value I hold dear — honesty, transparency, and ethical conduct in all aspects of life, be it personal or professional. Compassion and empathy guide my interactions with others; I believe in understanding and empathizing with diverse perspectives and experiences.</p>
-          <p>Resilience is a quality I deeply cherish — the power of perseverance, adaptability, and determination in overcoming obstacles and achieving goals. Continuous learning and personal growth are core tenets of my belief system; I value the opportunity to expand my horizons, gain new insights, and evolve as a person, both professionally and personally.</p>
-          <p>I also hold a strong belief in the power of positivity and gratitude, and in authenticity — being true to oneself, embracing individuality, and expressing genuine thoughts, feelings, and beliefs. Community and service are values that drive my commitment to making a positive impact in society; I believe in giving back, supporting others, and contributing to the well-being of communities.</p>
-
-          <h4 class="bio__section-title">Interests and Hobbies</h4>
-          <p>Hobbies and interests are an integral part of my life, providing avenues for relaxation, creativity, personal growth, and fulfillment. Reading has been a lifelong passion — I find solace and inspiration in books across genres such as fiction, non-fiction, self-help, and biographies, broadening my knowledge and stimulating my imagination.</p>
-          <p>Traveling fuels my sense of adventure and curiosity about the world — exploring new destinations, experiencing different cultures, and creating lasting memories. Cooking and baking are creative outlets that bring me joy, and gardening connects me to nature and promotes mindfulness and tranquility.</p>
-          <p>Photography allows me to capture moments and the beauty of the world through a lens. Fitness and exercise — workouts, yoga, hiking, and cycling — energize me and foster resilience and discipline. Volunteering and community service reflect my commitment to giving back and making a positive impact.</p>
-          <p>Music brings harmony and joy into my life, whether playing instruments, listening to a diverse range of genres, or attending live performances. I also find fulfillment in learning new languages and exploring different cultures.</p>
-          <p>Playing video games and watching movies round out my leisure time — offering immersive storytelling, problem-solving, and creative escape, while also sharpening decision-making and critical thinking skills.</p>
-
-          <h4 class="bio__section-title">Achievements and Milestones</h4>
-          <p>Achievements and milestones mark progress and growth along a journey. Graduating with a B plain (63 points) in the Kenya Certificate of Secondary Education (KCSE) from Kabarnet High School was a reflection of my academic abilities and my perseverance, dedication, and passion for learning. My performance in the Kenya Certificate of Primary Education (KCPE) from Ngeria West Academy, scoring 382 marks, laid a strong foundation for my academic journey.</p>
-          <p>Transitioning from high school to university marked a significant milestone — pursuing a Bachelor of Industrial Chemistry at Dedan Kimathi University of Technology (DeKUT), a decision aligned with my passion for chemistry and scientific exploration. The attachment at the Ministry of Water laboratories was a pivotal milestone, providing invaluable insight into real-world applications of chemistry in water quality assessment and environmental conservation.</p>
-          <p>Beyond the academic realm, I consider personal growth and character development significant achievements — overcoming social anxiety and developing effective communication skills were transformative milestones that reflect my resilience, adaptability, and continuous commitment to self-improvement.</p>
-
-          <h4 class="bio__section-title">Lessons Learnt</h4>
-          <p>Patience and persistence have been key to achieving long-term goals, whether navigating complex projects or pursuing career advancement. Embracing failure as an opportunity for growth, rather than a setback, has allowed me to extract valuable lessons and bounce back stronger.</p>
-          <p>Adaptability and agility are essential in a rapidly changing world — staying open to change and embracing innovation has enabled me to thrive in dynamic environments. Mentorship, both received and given, has been invaluable in my growth journey, as has building resilient networks of support, personally and professionally.</p>
-          <p>Embracing diversity and inclusion drives innovation, creativity, and success — promoting inclusivity and a culture of belonging has been pivotal in building cohesive teams and driving positive change. Continuous reflection and self-awareness guide my decision-making, career trajectory, and life choices, fueling a lifelong commitment to growth and self-development.</p>
-
-          <h4 class="bio__section-title">Conclusion</h4>
-          <p>Reflecting on my life's journey — from Kilibwoni Village to pursuing Industrial Chemistry — I am profoundly grateful for the rich tapestry of experiences that have shaped my path. Education emerged as a beacon of opportunity, from my formative years at Ngeria West Academy to the academic rigors of Dedan Kimathi University of Technology, driven by a passion for chemistry and a thirst for discovery.</p>
-          <p>Navigating the challenges of social anxiety, I learned the power of resilience, self-reflection, and the importance of seeking mentorship and support. My time as a tutor and my attachment at the Ministry of Water laboratories deepened my practical knowledge and opened my eyes to the real-world applications of chemistry in safeguarding public health and the environment.</p>
-          <p>Looking ahead, I carry with me the values of integrity, curiosity, and continuous learning. I aspire to make a meaningful impact in the world of chemistry, contributing to advancements that benefit society and the environment — embracing the future with optimism, resilience, and a steadfast commitment to personal and professional growth.</p>
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">YourName</h1>
+            <div class="flex gap-8 text-sm font-medium" id="nav-links">
+                <a href="#about" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition">About</a>
+                <a href="#skills" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition">Skills</a>
+                <a href="#projects" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition">Projects</a>
+                <a href="#contact" class="nav-link hover:text-blue-600 dark:hover:text-blue-400 transition">Contact</a>
+            </div>
         </div>
-      </div>
-    <button class="bio__toggle" id="bioToggle" aria-expanded="false" aria-controls="bioMore">
-      Read More ↓
-    </button>
-  </div>
+    </nav>
 
-  <!-- ===== Resume summary (plain text) ===== -->
-  <div class="resume-summary">
-    <h3 class="bio__title">Resume Summary</h3>
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-5xl md:text-6xl font-bold leading-tight">
+                    Hi, I'm <span class="text-blue-600">Your Name</span>
+                </h2>
+                <p class="text-2xl text-gray-600 dark:text-gray-400">Full Stack Developer / Designer</p>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-md">
+                    I create exceptional digital experiences with modern web technologies.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#projects" class="nav-link px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition">View My Work</a>
+                    <a href="#contact" class="nav-link px-8 py-3 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full font-medium transition">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <div class="w-80 h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://via.placeholder.com/600x600/4f46e5/ffffff?text=Your+Photo" 
+                         alt="Your Photo" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="resume-summary__block">
-      <h4>Professional Summary</h4>
-      <p>[Replace with a 2-3 sentence summary of your current professional profile — e.g. your current job title, years of experience, and what you specialize in as a sales/process engineer.]</p>
-    </div>
+    <!-- About -->
+    <section id="about" class="py-24 bg-white dark:bg-gray-800">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">About Me</h2>
+            <p class="text-lg leading-relaxed text-gray-600 dark:text-gray-400 text-center">
+                Write a short, engaging paragraph about yourself here. Talk about your background, passion for development, and what drives you.
+            </p>
+        </div>
+    </section>
 
-    <div class="resume-summary__block">
-      <h4>Experience</h4>
-      <ul class="resume-summary__list">
-        <li>
-          <strong>[Current Job Title]</strong> — [Current Company] <span>[Month Year – Present]</span>
-          <p>[Replace with your current or most recent role and 1-2 lines on your responsibilities/achievements.]</p>
-        </li>
-        <li>
-          <strong>Laboratory Attachment</strong> — Ministry of Water Laboratories <span>[Add dates]</span>
-          <p>Conducted water quality testing and analysis — pH, turbidity, chemical contaminant screening, and microbial assessments — on drinking water and wastewater treatment samples from rural and urban sources.</p>
-        </li>
-        <li>
-          <strong>Tutor</strong> — Local High School <span>[Add dates]</span>
-          <p>Taught and mentored students in the sciences, strengthening communication and subject-matter explanation skills.</p>
-        </li>
-      </ul>
-    </div>
+    <!-- Skills -->
+    <section id="skills" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="skills-grid"></div>
+        </div>
+    </section>
 
-    <div class="resume-summary__block">
-      <h4>Education</h4>
-      <ul class="resume-summary__list">
-        <li>
-          <strong>BSc Industrial Chemistry</strong> — Dedan Kimathi University of Technology (DeKUT) <span>[Add graduation year]</span>
-        </li>
-        <li>
-          <strong>KCSE</strong> — Kabarnet High School <span>B Plain, 63 Points</span>
-        </li>
-        <li>
-          <strong>KCPE</strong> — Ngeria West Academy <span>382 Marks</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <!-- Projects -->
+    <section id="projects" class="py-24 bg-white dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid"></div>
+        </div>
+    </section>
 
-<!-- ============ SKILLS ============ -->
-<section class="section" id="skills">
-  <div class="section__head">
-    <span class="node-tag">INST-02</span>
-    <h2>Skills</h2>
-  </div>
+    <!-- Contact -->
+    <section id="contact" class="py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Let's Work Together</h2>
+            <p class="text-lg mb-10 text-gray-600 dark:text-gray-400">I'm open to new opportunities and exciting projects.</p>
+            <a href="mailto:your.email@example.com" 
+               class="inline-block px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-lg font-medium transition">
+                Say Hello
+            </a>
+        </div>
+    </section>
 
-  <div class="skills__cols">
-    <div class="skills__col">
-      <h3 class="skills__col-title">Process &amp; Technical</h3>
-      <div class="gauge" data-value="90">
-        <div class="gauge__label"><span>Process Simulation (Aspen HYSYS / Plus)</span><span class="gauge__signal">90%</span></div>
-        <div class="gauge__track"><div class="gauge__fill"></div></div>
-      </div>
-      <div class="gauge" data-value="85">
-        <div class="gauge__label"><span>P&amp;ID / PFD Interpretation</span><span class="gauge__signal">85%</span></div>
-        <div class="gauge__track"><div class="gauge__fill"></div></div>
-      </div>
-      <div class="gauge" data-value="80">
-        <div class="gauge__label"><span>Mass &amp; Energy Balances</span><span class="gauge__signal">80%</span></div>
-        <div class="gauge__track"><div class="gauge__fill"></div></div>
-      </div>
-      <div class="gauge" data-value="75">
-        <div class="gauge__label"><span>Equipment Sizing &amp; Selection</span><span class="gauge__signal">75%</span></div>
-        <div class="gauge__track"><div class="gauge__fill"></div></div>
-      </div>
-    </div>
+    <footer class="py-8 text-center text-sm text-gray-500">
+        © 2026 Your Name. All rights reserved.
+    </footer>
 
-    <div class="skills__col">
-      <h3 class="skills__col-title">Commercial &amp; Sales</h3>
-      <div class="gauge" data-value="92">
-        <div class="gauge__label"><span>Technical Proposal Writing</span><span class="gauge__signal">92%</span></div>
-        <div class="gauge__track"><div class="gauge__fill"></div></div>
-      </div>
-      <div class="gauge" data-value="88">
-        <div class="gauge__label"><span>Client &amp; Stakeholder Negotiation</span><span class="gauge__signal">88%</span></div>
-        <div class="gauge__track"><div class="gauge__fill"></div></div>
-      </div>
-      <div class="gauge" data-value="80">
-        <div class="gauge__label"><span>Cost Estimation &amp; Quoting</span><span class="gauge__signal">80%</span></div>
-        <div class="gauge__track"><div class="gauge__fill"></div></div>
-      </div>
-      <div class="gauge" data-value="70">
-        <div class="gauge__label"><span>CRM / Pipeline Management</span><span class="gauge__signal">70%</span></div>
-        <div class="gauge__track"><div class="gauge__fill"></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tools">
-    <span class="tools__label">TOOLS &amp; SOFTWARE</span>
-    <div class="tools__chips">
-      <span class="chip">Aspen HYSYS</span>
-      <span class="chip">AutoCAD P&amp;ID</span>
-      <span class="chip">MS Excel / VBA</span>
-      <span class="chip">SAP</span>
-      <span class="chip">Salesforce</span>
-      <span class="chip">MATLAB</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CERTIFICATES ============ -->
-<section class="section" id="certificates">
-  <div class="section__head">
-    <span class="node-tag">CERT-03</span>
-    <h2>Certificates</h2>
-  </div>
-
-  <div class="certs__grid">
-
-    <article class="cert-card">
-      <div class="cert-card__icon">📄</div>
-      <div class="cert-card__body">
-        <h3>Certificate Name</h3>
-        <p class="cert-card__meta">Issuing Body &middot; Month Year</p>
-      </div>
-      <a href="assets/certs/cert-1.pdf" class="cert-card__link" target="_blank" rel="noopener">
-        View / Download →
-      </a>
-    </article>
-
-    <article class="cert-card">
-      <div class="cert-card__icon">📄</div>
-      <div class="cert-card__body">
-        <h3>Certificate Name</h3>
-        <p class="cert-card__meta">Issuing Body &middot; Month Year</p>
-      </div>
-      <a href="assets/certs/cert-2.pdf" class="cert-card__link" target="_blank" rel="noopener">
-        View / Download →
-      </a>
-    </article>
-
-    <article class="cert-card">
-      <div class="cert-card__icon">📄</div>
-      <div class="cert-card__body">
-        <h3>Certificate Name</h3>
-        <p class="cert-card__meta">Issuing Body &middot; Month Year</p>
-      </div>
-      <a href="assets/certs/cert-3.pdf" class="cert-card__link" target="_blank" rel="noopener">
-        View / Download →
-      </a>
-    </article>
-
-    <article class="cert-card">
-      <div class="cert-card__icon">📄</div>
-      <div class="cert-card__body">
-        <h3>Certificate Name</h3>
-        <p class="cert-card__meta">Issuing Body &middot; Month Year</p>
-      </div>
-      <a href="assets/certs/cert-4.pdf" class="cert-card__link" target="_blank" rel="noopener">
-        View / Download →
-      </a>
-    </article>
-
-    <article class="cert-card">
-      <div class="cert-card__icon">📄</div>
-      <div class="cert-card__body">
-        <h3>Certificate Name</h3>
-        <p class="cert-card__meta">Issuing Body &middot; Month Year</p>
-      </div>
-      <a href="assets/certs/cert-5.pdf" class="cert-card__link" target="_blank" rel="noopener">
-        View / Download →
-      </a>
-    </article>
-
-    <!-- Copy an <article class="cert-card">...</article> block above to add more -->
-
-  </div>
-</section>
-
-<!-- ============ PROJECTS ============ -->
-<section class="section" id="projects">
-  <div class="section__head">
-    <span class="node-tag">EQ-04</span>
-    <h2>Projects</h2>
-  </div>
-
-  <div class="projects__grid">
-
-    <article class="project-card">
-      <div class="project-card__tag">EQ-04.1</div>
-      <h3>Heat Exchanger Retrofit Proposal</h3>
-      <p>
-        Redesigned a shell-and-tube heat exchanger network for a process
-        client to cut steam consumption, then built the commercial case
-        that got budget approval from procurement.
-      </p>
-      <div class="project-card__chips">
-        <span class="chip chip--sm">HYSYS</span>
-        <span class="chip chip--sm">Pinch Analysis</span>
-        <span class="chip chip--sm">Cost Modeling</span>
-      </div>
-      <a href="#" class="project-card__link">View writeup →</a>
-    </article>
-
-    <article class="project-card">
-      <div class="project-card__tag">EQ-04.2</div>
-      <h3>Pump Package Specification &amp; Quote</h3>
-      <p>
-        Specified a centrifugal pump package against a client's process
-        datasheet, coordinated vendor quotes, and negotiated final terms
-        to close within the client's capex window.
-      </p>
-      <div class="project-card__chips">
-        <span class="chip chip--sm">Equipment Sizing</span>
-        <span class="chip chip--sm">Vendor Negotiation</span>
-        <span class="chip chip--sm">Proposal Writing</span>
-      </div>
-      <a href="#" class="project-card__link">View writeup →</a>
-    </article>
-
-    <article class="project-card">
-      <div class="project-card__tag">EQ-04.3</div>
-      <h3>Batch Reactor Troubleshooting</h3>
-      <p>
-        Diagnosed a yield-loss issue on a batch reactor via mass balance
-        reconciliation, proposed a low-cost operating change, and
-        presented findings to plant management.
-      </p>
-      <div class="project-card__chips">
-        <span class="chip chip--sm">Mass Balances</span>
-        <span class="chip chip--sm">Root Cause Analysis</span>
-        <span class="chip chip--sm">Reporting</span>
-      </div>
-      <a href="#" class="project-card__link">View writeup →</a>
-    </article>
-
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="section" id="contact">
-  <div class="section__head">
-    <span class="node-tag">REV-05</span>
-    <h2>Contact</h2>
-  </div>
-
-  <div class="contact__panel">
-    <div class="contact__info">
-      <p class="contact__lead">Open to sales engineering and process engineering roles — reach out.</p>
-      <ul class="contact__list">
-        <li><span>EMAIL</span><a href="mailto:your.email@example.com">your.email@example.com</a></li>
-        <li><span>PHONE</span><a href="tel:+254700000000">+254 700 000 000</a></li>
-        <li><span>LINKEDIN</span><a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">linkedin.com/in/yourname</a></li>
-        <li><span>LOCATION</span><span class="static">Embu, Kenya</span></li>
-      </ul>
-    </div>
-
-    <form class="contact__form" id="contactForm">
-      <label>
-        <span>NAME</span>
-        <input type="text" name="name" required placeholder="Jane Mwangi">
-      </label>
-      <label>
-        <span>EMAIL</span>
-        <input type="email" name="email" required placeholder="jane@company.com">
-      </label>
-      <label>
-        <span>MESSAGE</span>
-        <textarea name="message" rows="4" required placeholder="Let's talk about..."></textarea>
-      </label>
-      <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-      <p class="contact__form-note" id="formNote"></p>
-    </form>
-  </div>
-</section>
-
-<footer class="footer">
-  <span>© <span id="year"></span> Your Name. Built with HTML, CSS &amp; JS.</span>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
