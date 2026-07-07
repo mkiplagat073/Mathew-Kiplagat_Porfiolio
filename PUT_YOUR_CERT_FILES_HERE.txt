@@ -1,0 +1,14 @@
+Put your 5 certificate files in this folder, named exactly:
+  cert-1.pdf
+  cert-2.pdf
+  cert-3.pdf
+  cert-4.pdf
+  cert-5.pdf
+
+(or .jpg/.png if they're images instead of PDFs — just update the
+file extension in index.html to match, e.g. cert-1.jpg)
+
+Have more or fewer than 5? In index.html, copy or delete a whole
+<article class="cert-card">...</article> block to match your count.
+
+Delete this text file once your real certs are in place.

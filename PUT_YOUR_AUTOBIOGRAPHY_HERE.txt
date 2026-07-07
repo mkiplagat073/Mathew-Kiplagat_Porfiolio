@@ -1,0 +1,9 @@
+Put these 3 files in this folder, named exactly:
+  autobiography.pdf
+  resume.pdf
+  cv.pdf
+
+(If any is a Word doc instead, name it e.g. resume.docx and update
+the matching href in index.html's About section to match.)
+
+Delete this text file once your real documents are in place.

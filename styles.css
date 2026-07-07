@@ -341,6 +341,168 @@ img { max-width: 100%; display: block; }
 .about__copy p { color: var(--text-secondary); margin-bottom: 18px; max-width: 620px; }
 .about__copy p:last-child { margin-bottom: 0; }
 
+.about__bio-btn { display: inline-block; margin-top: 8px; margin-right: 12px; }
+
+.about__doc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.about__doc-links .about__bio-btn { margin-top: 0; }
+
+/* ===== Autobiography (expandable) & Resume summary ===== */
+.bio, .resume-summary {
+  max-width: 700px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--grid-line);
+}
+
+.bio__title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-cyan);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.bio__text p {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.bio__section-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-amber);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 28px 0 14px;
+}
+
+.bio__more {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.bio__more > * { min-height: 0; }
+
+.bio__more-inner { overflow: hidden; }
+
+.bio.is-expanded .bio__more {
+  grid-template-rows: 1fr;
+}
+
+.bio__toggle {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-amber);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.bio__toggle:hover { text-decoration: underline; }
+
+.resume-summary__block { margin-bottom: 28px; }
+.resume-summary__block:last-child { margin-bottom: 0; }
+
+.resume-summary__block h4 {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.resume-summary__block > p { color: var(--text-secondary); }
+
+.resume-summary__list li {
+  margin-bottom: 16px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+}
+
+.resume-summary__list li:last-child { margin-bottom: 0; }
+
+.resume-summary__list strong { color: var(--text-primary); }
+
+.resume-summary__list span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.resume-summary__list p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ============================================================
+   CERTIFICATES
+   ============================================================ */
+.certs__grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 760px) {
+  .certs__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.cert-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  padding: 24px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cert-card:hover {
+  border-color: var(--accent-amber);
+  transform: translateY(-4px);
+}
+
+.cert-card__icon {
+  font-size: 28px;
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  border: 1px solid var(--border);
+  background: var(--bg-panel-alt);
+}
+
+.cert-card__body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cert-card__meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.cert-card__link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-amber);
+  margin-top: auto;
+}
+
+.cert-card__link:hover { text-decoration: underline; }
+
 /* ============================================================
    SKILLS
    ============================================================ */
