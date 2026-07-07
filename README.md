@@ -1,4 +1,4 @@
-# Your Name — Portfolio
+# Mathew Kiplagat — Portfolio
 
 A dark-mode, industrial/process-engineering themed portfolio site built with
 plain HTML, CSS and JS. No build step, no framework — just three files.
