@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Chemical Engineer &amp; Sales Engineer</title>
+<meta name="description" content="Portfolio of Your Name — Chemical Process Engineer and Sales Engineer.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ PROCESS LINE (signature element) ============ -->
+<div class="process-line" aria-hidden="true">
+  <svg class="process-line__svg" preserveAspectRatio="none" viewBox="0 0 2 1000">
+    <line class="process-line__pipe" x1="1" y1="0" x2="1" y2="1000" />
+  </svg>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="topbar">
+  <div class="topbar__brand">
+    <span class="topbar__brand-mark">YN</span>
+    <span class="topbar__brand-text">Your Name</span>
+  </div>
+  <nav class="topbar__nav" aria-label="Primary">
+    <a href="#about" data-tag="PFD-01"><span class="nav-tag">PFD-01</span>About</a>
+    <a href="#skills" data-tag="INST-02"><span class="nav-tag">INST-02</span>Skills</a>
+    <a href="#projects" data-tag="EQ-03"><span class="nav-tag">EQ-03</span>Projects</a>
+    <a href="#contact" data-tag="REV-04"><span class="nav-tag">REV-04</span>Contact</a>
+  </nav>
+  <button class="topbar__menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ HERO / HOME ============ -->
+<section class="hero" id="home">
+  <div class="hero__inner">
+    <p class="hero__eyebrow">CHE + SALES // PROCESS-TO-PROFIT</p>
+    <h1 class="hero__title">
+      I turn <span class="hl">reaction kinetics</span><br>
+      into <span class="hl hl--amber">closed deals.</span>
+    </h1>
+    <p class="hero__sub">
+      Graduate Chemical Engineer and Sales Engineer. I speak both fluent
+      process flow diagram and fluent purchase order — built to spec projects
+      that satisfy engineers and close with procurement.
+    </p>
+    <div class="hero__cta">
+      <a href="#projects" class="btn btn--primary">View Projects</a>
+      <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+    </div>
+  </div>
+
+  <!-- Title block: engineering drawing stamp -->
+  <div class="title-block">
+    <div class="title-block__row title-block__row--title">
+      <span>TITLE</span>
+      <strong>YOUR NAME — PORTFOLIO</strong>
+    </div>
+    <div class="title-block__grid">
+      <div><span>DRAWN BY</span><strong>Y. NAME</strong></div>
+      <div><span>DATE</span><strong id="tbDate">—</strong></div>
+      <div><span>REV</span><strong>1.0</strong></div>
+      <div><span>SCALE</span><strong>N.T.S.</strong></div>
+      <div><span>SHEET</span><strong>1 OF 1</strong></div>
+      <div><span>STATUS</span><strong class="status-live">OPEN TO WORK</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="section__head">
+    <span class="node-tag">PFD-01</span>
+    <h2>About</h2>
+  </div>
+  <div class="about__grid">
+    <div class="about__diagram" aria-hidden="true">
+      <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="120" cy="60" r="26" class="mol-node" />
+        <circle cx="60" cy="140" r="20" class="mol-node mol-node--amber" />
+        <circle cx="180" cy="140" r="20" class="mol-node" />
+        <circle cx="120" cy="200" r="16" class="mol-node mol-node--amber" />
+        <line x1="120" y1="86" x2="66" y2="124" class="mol-bond" />
+        <line x1="120" y1="86" x2="174" y2="124" class="mol-bond" />
+        <line x1="66" y1="156" x2="112" y2="192" class="mol-bond" />
+        <line x1="174" y1="156" x2="128" y2="192" class="mol-bond" />
+      </svg>
+    </div>
+    <div class="about__copy">
+      <p>
+        I'm a graduate industrial chemical engineer working as a sales
+        engineer — which means I've spent time on both sides of the
+        purchase order: designing and troubleshooting process equipment,
+        and helping clients specify, justify, and buy it.
+      </p>
+      <p>
+        I understand mass and energy balances well enough to catch a
+        mis-sized pump on a datasheet, and I understand a buyer's
+        priorities well enough to know that spec sheet won't close the
+        deal on its own. That combination is what I bring to every
+        project: technically credible, commercially useful.
+      </p>
+      <p>
+        Outside of client meetings, I like getting back into the weeds —
+        process simulations, P&amp;ID reviews, and finding the cheaper
+        equivalent spec that still meets the process requirement.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section" id="skills">
+  <div class="section__head">
+    <span class="node-tag">INST-02</span>
+    <h2>Skills</h2>
+  </div>
+
+  <div class="skills__cols">
+    <div class="skills__col">
+      <h3 class="skills__col-title">Process &amp; Technical</h3>
+      <div class="gauge" data-value="90">
+        <div class="gauge__label"><span>Process Simulation (Aspen HYSYS / Plus)</span><span class="gauge__signal">90%</span></div>
+        <div class="gauge__track"><div class="gauge__fill"></div></div>
+      </div>
+      <div class="gauge" data-value="85">
+        <div class="gauge__label"><span>P&amp;ID / PFD Interpretation</span><span class="gauge__signal">85%</span></div>
+        <div class="gauge__track"><div class="gauge__fill"></div></div>
+      </div>
+      <div class="gauge" data-value="80">
+        <div class="gauge__label"><span>Mass &amp; Energy Balances</span><span class="gauge__signal">80%</span></div>
+        <div class="gauge__track"><div class="gauge__fill"></div></div>
+      </div>
+      <div class="gauge" data-value="75">
+        <div class="gauge__label"><span>Equipment Sizing &amp; Selection</span><span class="gauge__signal">75%</span></div>
+        <div class="gauge__track"><div class="gauge__fill"></div></div>
+      </div>
+    </div>
+
+    <div class="skills__col">
+      <h3 class="skills__col-title">Commercial &amp; Sales</h3>
+      <div class="gauge" data-value="92">
+        <div class="gauge__label"><span>Technical Proposal Writing</span><span class="gauge__signal">92%</span></div>
+        <div class="gauge__track"><div class="gauge__fill"></div></div>
+      </div>
+      <div class="gauge" data-value="88">
+        <div class="gauge__label"><span>Client &amp; Stakeholder Negotiation</span><span class="gauge__signal">88%</span></div>
+        <div class="gauge__track"><div class="gauge__fill"></div></div>
+      </div>
+      <div class="gauge" data-value="80">
+        <div class="gauge__label"><span>Cost Estimation &amp; Quoting</span><span class="gauge__signal">80%</span></div>
+        <div class="gauge__track"><div class="gauge__fill"></div></div>
+      </div>
+      <div class="gauge" data-value="70">
+        <div class="gauge__label"><span>CRM / Pipeline Management</span><span class="gauge__signal">70%</span></div>
+        <div class="gauge__track"><div class="gauge__fill"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tools">
+    <span class="tools__label">TOOLS &amp; SOFTWARE</span>
+    <div class="tools__chips">
+      <span class="chip">Aspen HYSYS</span>
+      <span class="chip">AutoCAD P&amp;ID</span>
+      <span class="chip">MS Excel / VBA</span>
+      <span class="chip">SAP</span>
+      <span class="chip">Salesforce</span>
+      <span class="chip">MATLAB</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="section__head">
+    <span class="node-tag">EQ-03</span>
+    <h2>Projects</h2>
+  </div>
+
+  <div class="projects__grid">
+
+    <article class="project-card">
+      <div class="project-card__tag">EQ-03.1</div>
+      <h3>Heat Exchanger Retrofit Proposal</h3>
+      <p>
+        Redesigned a shell-and-tube heat exchanger network for a process
+        client to cut steam consumption, then built the commercial case
+        that got budget approval from procurement.
+      </p>
+      <div class="project-card__chips">
+        <span class="chip chip--sm">HYSYS</span>
+        <span class="chip chip--sm">Pinch Analysis</span>
+        <span class="chip chip--sm">Cost Modeling</span>
+      </div>
+      <a href="#" class="project-card__link">View writeup →</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__tag">EQ-03.2</div>
+      <h3>Pump Package Specification &amp; Quote</h3>
+      <p>
+        Specified a centrifugal pump package against a client's process
+        datasheet, coordinated vendor quotes, and negotiated final terms
+        to close within the client's capex window.
+      </p>
+      <div class="project-card__chips">
+        <span class="chip chip--sm">Equipment Sizing</span>
+        <span class="chip chip--sm">Vendor Negotiation</span>
+        <span class="chip chip--sm">Proposal Writing</span>
+      </div>
+      <a href="#" class="project-card__link">View writeup →</a>
+    </article>
+
+    <article class="project-card">
+      <div class="project-card__tag">EQ-03.3</div>
+      <h3>Batch Reactor Troubleshooting</h3>
+      <p>
+        Diagnosed a yield-loss issue on a batch reactor via mass balance
+        reconciliation, proposed a low-cost operating change, and
+        presented findings to plant management.
+      </p>
+      <div class="project-card__chips">
+        <span class="chip chip--sm">Mass Balances</span>
+        <span class="chip chip--sm">Root Cause Analysis</span>
+        <span class="chip chip--sm">Reporting</span>
+      </div>
+      <a href="#" class="project-card__link">View writeup →</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="section__head">
+    <span class="node-tag">REV-04</span>
+    <h2>Contact</h2>
+  </div>
+
+  <div class="contact__panel">
+    <div class="contact__info">
+      <p class="contact__lead">Open to sales engineering and process engineering roles — reach out.</p>
+      <ul class="contact__list">
+        <li><span>EMAIL</span><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+        <li><span>PHONE</span><a href="tel:+254700000000">+254 700 000 000</a></li>
+        <li><span>LINKEDIN</span><a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">linkedin.com/in/yourname</a></li>
+        <li><span>LOCATION</span><span class="static">Embu, Kenya</span></li>
+      </ul>
+    </div>
+
+    <form class="contact__form" id="contactForm">
+      <label>
+        <span>NAME</span>
+        <input type="text" name="name" required placeholder="Jane Mwangi">
+      </label>
+      <label>
+        <span>EMAIL</span>
+        <input type="email" name="email" required placeholder="jane@company.com">
+      </label>
+      <label>
+        <span>MESSAGE</span>
+        <textarea name="message" rows="4" required placeholder="Let's talk about..."></textarea>
+      </label>
+      <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+      <p class="contact__form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Your Name. Built with HTML, CSS &amp; JS.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
